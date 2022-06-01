@@ -1,0 +1,25 @@
+<h3>Over the past 2 weeks, how often have you been bothered by any of the following problems?</h3>
+
+
+<%= form_for [@check_in, @screener] do |f| %>
+<h4>1. Little interest or pleasure in doing things?</h4>
+  <%= f.radio_button :question1, "0" %>
+  <%= f.label "Not at all" %><br>
+  <%= f.radio_button :question1, "1" %>
+  <%= f.label "Several days" %><br>
+  <%= f.radio_button :question1, "2" %>
+  <%= f.label "More than half the days" %><br>
+  <%= f.radio_button :question1, "3" %>
+  <%= f.label "Nearly every day" %><br>
+  <h4>2. Feeling down, depressed or hopeless?</h4>
+  <%= f.radio_button :question2, "0" %>
+  <%= f.label "Not at all" %><br>
+  <%= f.radio_button :question2, "1" %>
+  <%= f.label "Several days" %><br>
+  <%= f.radio_button :question2, "2" %>
+  <%= f.label "More than half the days" %><br>
+  <%= f.radio_button :question2, "3" %>
+  <%= f.label "Nearly every day" %><br>
+  <%= f.submit "Submit"%>
+<% end %>
+<br><br>

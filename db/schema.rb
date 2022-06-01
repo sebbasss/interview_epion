@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_10_000847) do
+ActiveRecord::Schema.define(version: 2022_06_01_205237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,4 +28,14 @@ ActiveRecord::Schema.define(version: 2018_07_10_000847) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "screeners", force: :cascade do |t|
+    t.string "question1"
+    t.string "question2"
+    t.bigint "check_in_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["check_in_id"], name: "index_screeners_on_check_in_id"
+  end
+
+  add_foreign_key "screeners", "check_ins"
 end
