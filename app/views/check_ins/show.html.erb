@@ -1,6 +1,8 @@
 <p>Please complete all of the steps on this page:</p>
 
-<%= link_to "Start PHQ screeners", new_check_in_screener_path(@check_in) %>
+<%= form_with url: new_check_in_screener_path(@check_in), method: :get do |f| %>
+  <%= f.submit "Start PHQ screeners" %>
+<% end %>
 
 <%= form_for(:check_in, url: check_in_path, method: :put, id: 1) do |f| %>
   <%= f.submit "Complete check in" %>

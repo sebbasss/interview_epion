@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem "bootstrap"
+gem 'popper_js', '~> 2.9.3'
 
 gem 'nokogiri'
 

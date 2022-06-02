@@ -14,10 +14,10 @@ class ScreenersController < ApplicationController
     score1 = @screener.question1.to_i
     score2 = @screener.question2.to_i
     if score1 >= 2 || score2 >= 2
-      flash.notice = "additional screaning should be completed"
+      flash.notice = "Additional screaning should be completed"
       redirect_to root_path
     else
-      flash.now[:notice] = "No additional screening required"
+      flash.notice = "No additional screening required"
       redirect_to root_path
     end
   end
